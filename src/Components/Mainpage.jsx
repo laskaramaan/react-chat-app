@@ -1,8 +1,23 @@
 import React from 'react'
+import Navbar from './Navbar/Navbar'
 
-function Mainpage() {
+
+function Mainpage(props) {
+  let curruser = props.userdata[0];
+  // console.log(curruser)
+
   return (
-    <div>Mainpage</div>
+    <div>
+      {props ? <div>
+        <Navbar userdata={curruser}/>
+        <div>Mainpage</div>
+      </div> : 
+      <div>
+        <Navbar/>
+        <div>Mainpage</div>
+      </div>
+      }
+    </div>
   )
 }
 

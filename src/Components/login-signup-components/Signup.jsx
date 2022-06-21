@@ -46,7 +46,7 @@ function Signup() {
             uploadBytes(storeageRef,profilepic).then(()=>{
                 getDownloadURL(storeageRef).then(url=>{
                     addDoc(collection(db,'users'),{
-                        email, password, dob, profimage: url,name
+                        email, password, dob, profimage: url,name, uid: user.uid
 
                     }).then(()=>{
                         setSuccessMsg('user added successully')

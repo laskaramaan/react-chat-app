@@ -11,6 +11,12 @@ nav .left img {
     height: 50px;
 }
 
+nav .right, nav .left,
+nav{
+    display: flex;
+    align-items: center;
+}
+
 nav .right button {
     background-color: black;
     border: 2px solid white;
@@ -25,4 +31,15 @@ nav .right button {
 nav .right button:hover{
     background-color: white;
     color: black;
+}
+
+.nav-profile-pic {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+}
+
+.nav-hr {
+    border-radius: none;
+    border-top: 1px solid rgb(26,26, 26);
 }
