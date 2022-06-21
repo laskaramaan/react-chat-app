@@ -1,0 +1,28 @@
+nav {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav .left img {
+    width: 100px;
+    height: 50px;
+}
+
+nav .right button {
+    background-color: black;
+    border: 2px solid white;
+    color: white;
+    font-weight: 600;
+    padding: 5px 10px;
+    margin: 0px 10px;
+    border-radius: 5px;
+
+}
+
+nav .right button:hover{
+    background-color: white;
+    color: black;
+}
