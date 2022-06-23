@@ -6,6 +6,8 @@ function Userprofile(props) {
   let curruser = props.userdata[0];
   // console.log(curruser)
 
+  
+
 
   return (
 
@@ -13,7 +15,7 @@ function Userprofile(props) {
       {props ? <div>
         <Navbar userdata={curruser} />
         <div className='section1'>
-          <div className='let'>
+          <div className='left'>
             <img src={curruser.profimage} className='userprofile-image' />
 
 

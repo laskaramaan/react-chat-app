@@ -17,6 +17,11 @@ nav{
     align-items: center;
 }
 
+nav .right{
+    width: 250px;
+    justify-content: space-evenly;
+}
+
 nav .right button {
     background-color: black;
     border: 2px solid white;
@@ -42,4 +47,20 @@ nav .right button:hover{
 .nav-hr {
     border-radius: none;
     border-top: 1px solid rgb(26,26, 26);
+}
+
+.add-icon:hover{
+    transition: all 2s;
+    transform: rotate(705deg);
+}
+
+.center {
+    display: flex;
+    width: 400px;
+}
+.search-user {
+    border: 2px solid white;
+    padding: 0px 10px;
+    border-radius: 10px;
+    width: 100%;
 }

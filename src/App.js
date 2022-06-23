@@ -14,6 +14,9 @@ import { db, auth } from './firebaseconfig/FirebaseConfig'
 import { doc, getDocs, query, where } from 'firebase/firestore'
 import { useNavigate } from 'react-router-dom'
 
+import Addpost from './Components/posts/Addpost'
+// import friendsprofile from './Components/Friendspofile/Friendsprofile'
+
 
 
 function App() {
@@ -33,9 +36,6 @@ function App() {
             setUser(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
           };
           getUser();
-
-
-
         }
         else {
           setUser(null);
@@ -59,12 +59,12 @@ function App() {
             <Route path='/login' element={<Login />} />
 
             {/* props ka use ho rha hai yaha  */}
-            <Route path='/mainpage' element={<Mainpage userdata={user}/>}/>
-            <Route path='/' element={<Mainpage userdata={user}/>}/>
-            <Route path='/userchats' element={<Userchats userdata={user}/>}/>
-            <Route path='userprofile' element={<Userprofile userdata={user}/>}/>
-
-            <Route path='/*' element={<Fof />} />
+            <Route path='/mainpage' element={<Mainpage userdata={user} />} />
+            <Route path='/' element={<Mainpage userdata={user} />} />
+            <Route path='/userchats' element={<Userchats userdata={user} />} />
+            <Route path='userprofile' element={<Userprofile userdata={user} />} />
+            <Route path='/addpost' element={<Addpost userdata={user}/>}/>
+            <Route path='/*' element={<Fof userdata={user} />} />
           </Routes>
         </BrowserRouter>
 

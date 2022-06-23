@@ -1,8 +1,20 @@
 import React from 'react'
+import Navbar from '../Navbar/Navbar'
 
-function Userchats() {
+function Userchats(props) {
+  let curruser = props.userdata[0]
+
   return (
-    <div>Userchats</div>
+    <div>
+      {props ? <div>
+        <Navbar userdata={curruser} />
+        <div>userchats</div>
+      </div> :
+        <div>
+          <Navbar/>
+          <div>You are not logged in</div>
+          </div>}
+    </div>
   )
 }
 
